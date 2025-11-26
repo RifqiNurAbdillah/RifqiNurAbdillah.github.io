@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rifqi Nur Abdillah</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+
+<!-- roboto -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="poppins navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid" style="padding-left: 2rem; padding-right: 2rem;">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#home"> <img src="" alt="" class="img-fluid" style="max-height: 40px;"> Rifqi Nur Abdillah </a>
+
+        <!-- Toggler button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#galeri">Galeri</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#kontak">Contact</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Home -->
+    <section class="poppins Home" id="home">
+        <div class="container">
+            <div class="row align-items-center ">
+
+            <!-- Gambar akan tampil di atas di layar kecil -->
+            <div class="col-md-6 text-center mt-4 mt-md-0 order-1 order-md-2 ">
+            <img src="frontend/fotopp.jpg" alt="Ilustrasi Home" class="img-fluid w-100 h-auto rounded shadow" style="max-width: 30vh;">
+            </div>
+
+            <!-- Teks akan tampil di bawah di layar kecil, dan di kiri saat besar -->
+                <div class="col-md-6 text-center text-md-start order-2 order-md-1">
+                <h1 class="display-4 fw-bold">Hallo Nama Saya</h1>
+                  <h1 class="text-muted mt-3 mb-4 fw-semibold">
+                    Rifqi Nur Abdillah
+                  </h1>
+                    <a href="#galeri" class="btn btn-primary btn-lg" style="width: 140px; margin-right: 10px;" >Portofolio</a>
+                    <a href="#kontak" class="btn btn-primary btn-lg" style="width: 150px;">Kontak</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang -->
+<section class="poppins About bg-secondary text-white py-5" id="about">
+  <div class="container">
+    <div class="row align-items-center" style="margin-top: 13vh;">
+
+      <!-- Kolom Gambar -->
+      <div class="col-12 col-xl-6 text-center mb-4 order-1">
+        <div class="stack-container mx-auto">
+          <div class="photo-box box1">
+            <img src="frontend/1.jpg" alt="foto 1">
+          </div>
+          <div class="photo-box box2">
+            <img src="frontend/new.jpg" alt="foto 2">
+          </div>
+        </div>
+
+        <div class="photo-container mt-4 mx-auto">
+          <img src="frontend/2.jpg" alt="foto 3" style="max-height: 60vh;">
+        </div>
+      </div>
+
+      <!-- Kolom Teks -->
+      <div class="col-12 col-xl-6 text-center text-xl-start order-2">
+        <h2 class="fw-bold mb-3" >Tentang Saya</h2>
+        <p class="mb-3">
+            Saya Mahasiswa Semester 5 Teknik Informatika Universitas PGRI Semarang dengan fokus pada Web Development dan Internet of Things (IoT). 
+            Memiliki kemampuan dalam pengembangan aplikasi berbasis web menggunakan Go (Golang) untuk backend, serta memahami integrasi dengan MySQL dan API sederhana. 
+            Berpengalaman dalam membuat sistem otomatisasi berbasis sensor dengan ESP8266 serta mengimplementasikan konsep logika pemrograman, struktur data, dan komputasi cerdas dalam proyek nyata.
+        </p>
+        <p>
+            Melalui website ini, saya bermaksud menampilkan berbagai hasil proyek yang telah saya lakukan. 
+            Website ini saya gunakan sebagai media untuk menyajikan informasi, dokumentasi dari setiap proyek yang saya kerjakan.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+html {
+  font-size: 16px; /* default desktop */
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 12px; /* perkecil skala di HP */
+  }
+}
+
+.photo-container {
+  display: inline-block;
+  width: 22rem; /* 350px */
+  border-radius: 1.25rem;
+  animation: moveBox 6s infinite alternate ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+.photo-container img {
+  width: 100%;
+  display: block;
+  border-radius: 1.25rem;
+  border: 0.375rem solid #fff;
+  box-sizing: border-box;
+}
+
+@keyframes moveBox {
+  from { transform: translateX(-4.7rem); } /* 75px */
+  to   { transform: translateX(0); }
+}
+
+.stack-container {
+  position: relative;
+  width: 100%;
+  max-width: 31rem; /* 500px */
+  height: 22rem;    /* 350px */
+}
+
+.photo-box {
+  position: absolute;
+  width: 19rem; /* 300px */
+  border-radius: 1.25rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,0.2);
+}
+.photo-box img {
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 0.375rem solid #fff;
+  display: block;
+  box-sizing: border-box;
+}
+
+.box1 {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.box2 {
+  top: 7rem;     /* 110px */
+  left: 11.5rem; /* 200px */
+  z-index: 2;
+}
+
+</style>
+    <!-- Galeri -->
+    <section class="Galeri" id="galeri">
+        <header class="galeri-k" id="shop">
+                <div class="text-center text-black">
+                <h1 class="text-center fw-bolder" style="padding-top: 8vh;">Proyek Saya</h1>
+                </div>
+        </header>
+        
+  <div class="container px-4 px-lg-5 mt-5">
+  <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+<!-- Dwonloader -->
+    <div class="col mb-5">
+      <div class="card h-100 rounded-4">
+        <img class="card-img-top" src="gambar portofolio/image.png" alt="...">
+        <div class="card-body p-4 text-center">
+          <h5 class="fw-bolder">Web Downloader Video</h5>
+        </div>
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+          <p>
+            Web yang berisi alat untuk download video dari Instagram, Facebook, dan TikTok
+            <a href="/downloader.html" target="_self">Lihat Selengkapnya</a>
+          </p>
+        </div>
+      </div>
+    </div>
+<!-- web saw -->
+    <div class="col mb-5">
+      <div class="card h-100 rounded-4">
+
+        <img class="card-img-top" src="gambar portofolio/SAW.png" alt="...">
+        <div class="card-body p-4 text-center">
+          <h5 class="fw-bolder">Web Penilaian Siswa</h5>
+        </div>
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+          <p>
+            Web yang berguna untuk mengetahui siswa yang kurang berprestasiY yang terintegrasi database MYSQL
+            <a href="saw.html" target="_blank">Lihat Selengkapnya</a>
+          </p>
+        </div>
+      </div>
+    </div>
+<!-- kopi -->
+    <div class="col mb-5">
+      <div class="card h-100 rounded-4">
+
+        <img class="card-img-top" src="gambar portofolio/webkopi.png" alt="...">
+        <div class="card-body p-4 text-center">
+          <h5 class="fw-bolder">Web Kopi</h5>
+        </div>
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+          <p>Web marketplace yang menampilkan jenis-jenis kopi yang terintegrasi database MYSQL
+            <a href="/kopi.html" target="_self">Lihat Selengkapnya</a>
+          </p>
+        </div>
+      </div>
+    </div>
+<!-- web sig -->
+    <div class="col mb-5">
+      <div class="card h-100 rounded-4">
+        <img class="card-img-top" src="gambar portofolio/sig.png" alt="...">
+        <div class="card-body p-4 text-center">
+          <h5 class="fw-bolder">Web Sebaran informasi Geografis</h5>
+        </div>
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+          <p>Web yang dibuat Untuk Menampilkan Sebaran Balita dengan Jumlah Posyandu.
+            <a href="/sig.html" target="_self">Lihat Selengkapnya</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- copy-paste col lain di sini -->
+    
+  </div>
+</div>
+
+ <!--bagian kunjungan wisata  -->
+
+               
+
+</section>
+         
+
+    <!-- Kontak -->
+<section class="Kontak" id="kontak">
+  <header class="bg-dark py-5" id="shop">
+    <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+        <h1 class="display-4 fw-bolder">Kontak</h1>
+      </div>
+    </div>
+  </header>
+
+  <section class="profil">
+    <div class="notice container mt-5 text-center" style="font-size: 3rem;">Hubungi Kami:</div>
+    <p class="keterangan container mt-3 text-center" style="font-size: 1.5rem;">
+      Ingin berdiskusi tentang proyek atau memiliki pertanyaan? Hubungi kami, kami akan segera membalas pesan Anda.
+    </p>
+
+    <div class="kontak mt-3 text-center">
+      <a href="https://wa.me/+6285713143209" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+      <a href="https://www.instagram.com/rifqi_nurabdillah?igsh=eHlkdWFjbGQxMmxy" target="_blank"><i class='bx bxl-instagram'></i></a>
+      <a href="https://t.me/+6285713143209" target="_blank"><i class='bx bxl-telegram'></i></a>
+    </div>
+  </section>
+</section>
+    
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

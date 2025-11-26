@@ -1,0 +1,238 @@
+body {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* normal */
+    }
+
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700; /* bold */
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px; 
+      line-height: 1.6;  
+      margin-bottom: 1rem;
+    }
+
+
+    em {
+      font-style: italic;
+    }
+    
+html, body {
+  overflow-x: hidden; /* cegah scroll horizontal */
+}
+html, body {
+  overflow-x: hidden; /* cegah scroll horizontal */
+}
+
+
+.Home {
+    padding-top: 14%;
+    min-height: 100vh;
+}
+
+.About {
+    min-height: 100vh;
+}
+
+h2 {
+  font-family: 'Birthstone', cursive;
+  font-size: 3rem;
+}
+
+.galeri-k h1 {
+  font-family: 'Birthstone', cursive;
+  font-size: 3rem;
+
+}
+.Galeri {
+    min-height: 100vh;
+    align-items: center;
+    background-image: url("frontend/9323173.jpg"); /* ganti dengan foto kamu */
+    background-size: cover;     /* biar full cover */
+    background-position: center; /* posisi tengah */
+    color: white; /* teks default putih */
+    padding-bottom: 5vh; /* kasih jarak bawah */
+}
+
+.date-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #070e77; /* warna merah/oranye */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+  .date-box .day {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+    display: block;
+  }
+  .date-box .monthyear {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+.Galeri .bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Lapisan gelap/putih pucat */
+  background: rgba(255, 255, 255, 0.7); /* bisa ganti ke rgba(0,0,0,0.5) kalau mau gelap */
+  
+  /* Blur aman */
+  filter: blur(8px);
+  transform: scale(1.1); /* biar blur tidak kepotong */
+  
+  z-index: 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+}
+
+.kontak {
+    min-height: 50vh;
+}
+
+.navbar-brand{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.card {
+    transition: 0.3s ease; /* biar halus efeknya */
+}
+
+.card:hover{
+    filter: brightness(90%); /* bikin lebih gelap 10% */
+    cursor: pointer; /* biar ada tanda klik */
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  transition: 0.4s ease;
+}
+
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* 🔹 Ini cara manggil hover-nya */
+.card:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card:hover img {
+  filter: brightness(80%);
+}
+
+
+.kontak-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+.kontak-kiri, .kontak-kanan {
+    display: grid;
+    gap: 20px;
+}
+.kontak-kiri {
+    grid-template-columns: 1fr; /* 4 kotak ke bawah */
+}
+.kontak-kanan {
+    grid-template-columns: 1fr; /* 3 kotak ke bawah */
+}
+.kontak-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.kontak-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: 0.3s;
+}
+.kontak-item img:hover {
+    border-color: #000;
+    transform: scale(1.05);
+}
+.kontak-nama {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.kontak-kiri {
+  padding-right: 50px; /* kasih jarak ke kanan */
+}
+.kontak-kanan {
+  padding-left: 50px;  /* kasih jarak ke kiri */
+}
+
+.kontak a {
+  font-size: 4rem;      /* ukuran ikon */
+  margin: 0 15px;       /* jarak antar ikon */
+  color: black;         /* warna ikon */
+  text-decoration: none;
+}
+
+.kontak a:hover {
+  color: #555;          /* warna saat hover */
+}
+
+.kontak {
+  display: flex;
+  justify-content: center;
+}
