@@ -45,3 +45,18 @@ if(e.key === 'ArrowRight') next.click();
 goTo(0);
 })();
 
+const cards = document.querySelectorAll('.animate-card');
+
+const cardObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target); // animasi hanya sekali
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+});
+
+cards.forEach(card => cardObserver.observe(card));

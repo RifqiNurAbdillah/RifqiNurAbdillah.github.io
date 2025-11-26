@@ -1,42 +1,38 @@
 body {
     scroll-behavior: smooth;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400; /* normal */
-    }
-
-    h1 {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 700; /* bold */
-    }
-
-    h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      font-size: 22px;
-      margin-top: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-family: 'Roboto', sans-serif;
-      font-size: 16px; 
-      line-height: 1.6;  
-      margin-bottom: 1rem;
-    }
-
-
-    em {
-      font-style: italic;
-    }
-    
-html, body {
-  overflow-x: hidden; /* cegah scroll horizontal */
-}
-html, body {
-  overflow-x: hidden; /* cegah scroll horizontal */
 }
 
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; /* bold */
+}
 
+h2 {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px; 
+    line-height: 1.6;  
+    margin-bottom: 1rem;
+}
+
+em {
+    font-style: italic;
+}
+
+html, body {
+    overflow-x: hidden; /* cegah scroll horizontal */
+}
+
+/* ===== Section Layout ===== */
 .Home {
     padding-top: 14%;
     min-height: 100vh;
@@ -47,48 +43,24 @@ html, body {
 }
 
 h2 {
-  font-family: 'Birthstone', cursive;
-  font-size: 3rem;
+    font-family: 'Lora', serif;
+    font-size: 3rem;
 }
 
 .galeri-k h1 {
-  font-family: 'Birthstone', cursive;
-  font-size: 3rem;
-
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
 }
+
 .Galeri {
     min-height: 100vh;
     align-items: center;
     background-image: url("frontend/9323173.jpg"); /* ganti dengan foto kamu */
-    background-size: cover;     /* biar full cover */
-    background-position: center; /* posisi tengah */
-    color: white; /* teks default putih */
-    padding-bottom: 5vh; /* kasih jarak bawah */
+    background-size: cover;     
+    background-position: center; 
+    color: white; 
+    padding-bottom: 5vh; 
 }
-
-.date-box {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #070e77; /* warna merah/oranye */
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 6px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  }
-  .date-box .day {
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 1;
-    display: block;
-  }
-  .date-box .monthyear {
-    font-size: 12px;
-    line-height: 1.2;
-  }
 
 .Galeri .bg-overlay {
   position: absolute;
@@ -235,4 +207,16 @@ h2 {
 .kontak {
   display: flex;
   justify-content: center;
+}
+
+/* Animasi kartu Galeri saat muncul */
+.animate-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.animate-card.show {
+    opacity: 1;
+    transform: translateY(0);
 }
