@@ -310,19 +310,86 @@ document.addEventListener('DOMContentLoaded', () => {
   </header>
 
   <section class="profil">
-    <div class="notice container mt-5 text-center" style="font-size: 3rem;">Hubungi Kami:</div>
-    <p class="keterangan container mt-3 text-center" style="font-size: 1.5rem;">
-      Ingin berdiskusi tentang proyek atau memiliki pertanyaan? Hubungi kami, kami akan segera membalas pesan Anda.
-    </p>
+<div class="notice container mt-5 text-center animate-kontak-item" style="font-size: 3rem;">
+    Hubungi Kami:
+</div>
 
-    <div class="kontak mt-3 text-center">
-      <a href="https://wa.me/+6285713143209" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-      <a href="https://www.instagram.com/rifqi_nurabdillah?igsh=eHlkdWFjbGQxMmxy" target="_blank"><i class='bx bxl-instagram'></i></a>
-      <a href="https://t.me/+6285713143209" target="_blank"><i class='bx bxl-telegram'></i></a>
-      <a href="https://github.com/RifqiNurAbdillah" target="_blank"><i class='bx bxl-github'></i></a>
-    </div>
+<p class="keterangan container mt-3 text-center animate-kontak-item" style="font-size: 1.5rem;">
+  Ingin berdiskusi tentang proyek atau memiliki pertanyaan? Hubungi kami, kami akan segera membalas pesan Anda.
+</p>
+
+<div class="kontak mt-3 text-center">
+  <a href="https://wa.me/+6285713143209" target="_blank"><i class='bx bxl-whatsapp animate-kontak-item'></i></a>
+  <a href="https://www.instagram.com/rifqi_nurabdillah?igsh=eHlkdWFjbGQxMmxy" target="_blank"><i class='bx bxl-instagram animate-kontak-item'></i></a>
+  <a href="https://t.me/+6285713143209" target="_blank"><i class='bx bxl-telegram animate-kontak-item'></i></a>
+  <a href="https://github.com/RifqiNurAbdillah" target="_blank"><i class='bx bxl-github animate-kontak-item'></i></a>
+</div>
+
   </section>
 </section>
+
+<style>
+/* Efek muncul awal */
+.animate-kontak-item {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.7s ease-out;
+}
+
+/* Saat terlihat */
+.animate-kontak-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efek bounce untuk ikon */
+.kontak i.show {
+    animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+    0% { transform: translateY(20px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* Hover icon */
+.kontak i:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+    color: #198754;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".animate-kontak-item");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                // Tambahkan animasi berurutan
+                elements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add("show");
+                    }, index * 200);
+                });
+
+            } else {
+                // Reset animasi agar bisa muncul lagi saat scroll naik
+                entry.target.classList.remove("show");
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
+
     
 <!-- Bootstrap 5 JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
