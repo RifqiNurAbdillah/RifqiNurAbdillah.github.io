@@ -13,67 +13,143 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
 
-<!-- roboto -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;600&family=Playfair+Display:wght@700&family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;600&family=Playfair+Display:wght@700&family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <style>
+    /* Mengatur tinggi halaman */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Flexbox untuk memastikan footer tetap di bawah */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Agar footer tetap di bawah, bahkan jika konten lebih sedikit */
+    main {
+      flex-grow: 1;
+    }
+
+    /* Menambahkan padding pada konten untuk memberi jarak dengan footer */
+    section.joger {
+      padding-bottom: 30px; /* Memberikan jarak di bawah konten */
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 30px 0;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    /* Menambahkan ikon sosial */
+    footer .social-links a {
+      font-size: 1.8rem;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    footer .social-links a:hover {
+      transform: scale(1.2);
+      color: #198754;
+    }
+
+    footer .social-links i {
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid" style="padding-left: 2rem; padding-right: 2rem;">
-        <!-- Brand -->
-        <a class="navbar-brand" href="index.html#home"> <img src="" alt="" class="img-fluid" style="max-height: 40px;"> Rifqi Nur Abdillah </a>
-        
-        <!-- Toggler button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Brand -->
+      <a class="navbar-brand" href="index.html#home">
+        <img src="" alt="" class="img-fluid" style="max-height: 40px;">
+        Rifqi Nur Abdillah
+      </a>
+
+      <!-- Toggler button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        </button>
+      </button>
 
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-            <a class="nav-link"href="index.html#home">Home</a>
-            </li>
-            <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="index.html#about">About</a>
-            </li>
-            <li class="nav-item">
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="index.html#galeri">Galeri</a>
-            </li>
-            <li class="nav-item">
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="index.html#kontak">Contact</a>
-            </li>
+          </li>
         </ul>
-        </div>
+      </div>
     </div>
-    </nav>
+  </nav>
 
-    <!-- teks -->
-<section class="joger container mx-auto pt-5">
-    <img src="gambar portofolio/kkl.png" alt="" width="800rem" class="img-fluid d-block mx-auto mt-5 rounded-4">
+  <!-- Teks dan Konten -->
+  <main>
+    <section class="joger container mx-auto pt-5">
+      <img src="gambar portofolio/kkl.png" alt="" width="800rem" class="img-fluid d-block mx-auto mt-5 rounded-4">
     
-<!-- Judul dan deskripsi -->
-    <h3 class="mt-5 text-xl font-semibold">Web Laporan dan Dokumentasi KKL Bali</h3>
-    <p class="mt-2 text-gray-700">Web ini menggunakan HTML, CSS, dan js.</p>
+      <!-- Judul dan deskripsi -->
+      <h3 class="mt-5 text-xl font-semibold">Web Laporan dan Dokumentasi KKL Bali</h3>
+      <p class="mt-2 text-gray-700">Web ini menggunakan HTML, CSS, dan JS.</p>
 
-    <!-- Penjelasan -->
-    <h3 class="mt-6 text-lg font-semibold">Penjelasan Web</h3>
-    <p class="mt-2 text-gray-700">
+      <!-- Penjelasan -->
+      <h3 class="mt-6 text-lg font-semibold">Penjelasan Web</h3>
+      <p class="mt-2 text-gray-700">
         Web ini dapat diakses <a href="https://kkl-two.vercel.app/" target="_blank" class="text-blue-600 underline">di sini</a>.<br>
         Repository proyek tersedia <a href="https://github.com/RifqiNurAbdillah/kkl.git" target="_blank" class="text-blue-600 underline">di sini</a>.<br><br>
         Web menampilkan Laporan dan Dokumentasi perjalanan.
-    </p>
+      </p>
+    </section>
+  </main>
 
-</section>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="mb-2">&copy; 2025 Rifqi Nur Abdillah. All rights reserved.</p>
+      <p>Follow me on:</p>
+      <div class="social-links">
+        <a href="https://wa.me/+6285713143209" target="_blank" class="text-white mx-2">
+          <i class='bx bxl-whatsapp' style="font-size: 2rem;"></i>
+        </a>
+        <a href="https://www.instagram.com/rifqi_nurabdillah?igsh=eHlkdWFjbGQxMmxy" target="_blank" class="text-white mx-2">
+          <i class='bx bxl-instagram' style="font-size: 2rem;"></i>
+        </a>
+        <a href="https://t.me/+6285713143209" target="_blank" class="text-white mx-2">
+          <i class='bx bxl-telegram' style="font-size: 2rem;"></i>
+        </a>
+        <a href="https://github.com/RifqiNurAbdillah" target="_blank" class="text-white mx-2">
+          <i class='bx bxl-github' style="font-size: 2rem;"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
