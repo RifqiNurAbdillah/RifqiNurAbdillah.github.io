@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .kontak i:hover {
     transform: scale(1.2);
     transition: 0.3s;
-    color: #198754;
+    color: #979797;
 }
 
 /* Footer Styling */
@@ -541,7 +541,7 @@ footer .social-links a {
 
 footer .social-links a:hover {
     transform: scale(1.2);
-    color: #198754; /* Ganti dengan warna yang diinginkan */
+    color: #198754; 
 }
 
 footer .social-links i {
@@ -558,7 +558,6 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
 
             if (entry.isIntersecting) {
-                // Tambahkan animasi berurutan
                 elements.forEach((el, index) => {
                     setTimeout(() => {
                         el.classList.add("show");
@@ -566,7 +565,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
 
             } else {
-                // Reset animasi agar bisa muncul lagi saat scroll naik
                 entry.target.classList.remove("show");
             }
         });
