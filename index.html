@@ -184,18 +184,48 @@ html {
 
 </style>
 <!-- Galeri -->
+<!-- Galeri Section -->
 <section class="Galeri" id="galeri">
-    <header class="galeri-k" id="shop">
-        <div class="text-center text-black">
-            <h1 class="text-center fw-bolder" style="padding-top: 8vh;">Proyek Saya</h1>
-        </div>
+    <header class="text-center text-black" id="shop">
+        <h1 class="fw-bolder" style="padding-top: 8vh;">Proyek Saya</h1>
     </header>
 
+    <!-- Search bar dan Filter -->
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="input-group mb-4">
+                    <!-- Search Input -->
+                    <input type="text" id="search-input" class="form-control" placeholder="Masukkan Judul Proyek..." style="border-radius: 30px; padding-left: 15px;"/>
+
+                    <!-- Filter Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-indigo dropdown-toggle" type="button" id="filter-dropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 30px; padding: 10px 10px;">
+                            Semua
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="filter-dropdown">
+                            <li><a class="dropdown-item" href="#" data-category="semua">Semua</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="website">Website</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="uiux">UI/UX</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Search Button -->
+                    <div class="input-group-append">
+                        <button id="search-button" class="btn btn-secondary" style="border-radius: 30px; padding: 10px 30px;">
+                            <i class="fas fa-search"></i> Cari
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
-
             <!-- Card 1 -->
-            <div class="col mb-5">
+            <div class="col mb-5" data-category="website">
                 <div class="card h-100 rounded-4 animate-card">
                     <img class="card-img-top" src="gambar portofolio/image.png" alt="Web Downloader Video">
                     <div class="card-body p-4 text-center">
@@ -211,7 +241,7 @@ html {
             </div>
 
             <!-- Card 2 -->
-            <div class="col mb-5">
+            <div class="col mb-5" data-category="website">
                 <div class="card h-100 rounded-4 animate-card">
                     <img class="card-img-top" src="gambar portofolio/SAW.png" alt="Web Penilaian Siswa">
                     <div class="card-body p-4 text-center">
@@ -220,14 +250,14 @@ html {
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <p>
                             Web analisis siswa yang kurang berprestasi yang terintegrasi database MYSQL
-                            <a href="saw.html" target="_blank">Lihat Selengkapnya</a>
+                            <a href="saw.html">Lihat Selengkapnya</a>
                         </p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="col mb-5">
+            <div class="col mb-5" data-category="website">
                 <div class="card h-100 rounded-4 animate-card">
                     <img class="card-img-top" src="gambar portofolio/webkopi.png" alt="Web Kopi">
                     <div class="card-body p-4 text-center">
@@ -243,11 +273,11 @@ html {
             </div>
 
             <!-- Card 4 -->
-            <div class="col mb-5">
+            <div class="col mb-5" data-category="website">
                 <div class="card h-100 rounded-4 animate-card">
-                    <img class="card-img-top" src="gambar portofolio/sig.png" alt="Web Sebaran informasi Geografis">
+                    <img class="card-img-top" src="gambar portofolio/signew.png" alt="Web Sebaran informasi Geografis">
                     <div class="card-body p-4 text-center">
-                        <h5 class="fw-bolder">Web Sebaran informasi Geografis</h5>
+                        <h5 class="fw-bolder">Web SIG</h5>
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <p>
@@ -258,9 +288,84 @@ html {
                 </div>
             </div>
 
+            <!-- Card 5 -->
+            <div class="col mb-5" data-category="website">
+                <div class="card h-100 rounded-4 animate-card">
+                    <img class="card-img-top" src="gambar portofolio/kkl.png" alt="kkl">
+                    <div class="card-body p-4 text-center">
+                        <h5 class="fw-bolder">Web Laporan KKL</h5>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <p>
+                            Web yang dibuat untuk menampilkan dokumentasi KKL ke Bali.
+                            <a href="/kkl.html" target="_self">Lihat Selengkapnya</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
+
+<script>
+// Pencarian Berdasarkan Judul Proyek
+document.getElementById('search-input').addEventListener('input', function(event) {
+    const query = event.target.value.toLowerCase();
+    const cards = document.querySelectorAll('.col');
+    const selectedCategory = document.querySelector('.dropdown-item.active')?.getAttribute('data-category') || 'semua';
+
+    cards.forEach(card => {
+        const title = card.querySelector('.card-body h5').textContent.toLowerCase();
+        const cardCategory = card.getAttribute('data-category');
+
+        // Menampilkan card jika cocok dengan pencarian atau kategori yang dipilih
+        if (title.includes(query) && (selectedCategory === 'semua' || selectedCategory === cardCategory)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
+
+// Filter Berdasarkan Kategori
+const filterItems = document.querySelectorAll('.dropdown-item');
+
+filterItems.forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Menambahkan class active pada item yang dipilih
+        filterItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+
+        const category = item.getAttribute('data-category');
+        const cards = document.querySelectorAll('.col');
+        const searchQuery = document.getElementById('search-input').value.toLowerCase();
+
+        // Ubah teks tombol dropdown menjadi kategori yang dipilih
+        const filterButton = document.getElementById('filter-dropdown');
+        filterButton.textContent = item.textContent;  // Update button text
+
+        cards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            const title = card.querySelector('.card-body h5').textContent.toLowerCase();
+
+            // Menampilkan card jika sesuai dengan kategori dan pencarian
+            if ((category === 'semua' || category === cardCategory) && title.includes(searchQuery)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Menambahkan default category 'Semua' pada saat pertama kali load
+document.querySelector('.dropdown-item[data-category="semua"]').classList.add('active');
+
+</script>
+
 
 <!-- CSS Animasi -->
 <style>

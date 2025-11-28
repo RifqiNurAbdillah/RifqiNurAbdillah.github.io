@@ -220,3 +220,18 @@ h2 {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Tombol Hover */
+/* Tombol Hover */
+.btn:hover {
+    color: black !important;  /* Mengubah warna teks menjadi hitam */
+    background-color: transparent !important;  /* Tidak mengubah background */
+}
+
+/* Tombol Aktif / Fokus */
+.btn:focus, .btn:active {
+    color: black !important;  /* Mengubah warna teks menjadi hitam saat aktif/fokus */
+    background-color: transparent !important;  /* Tidak mengubah background */
+}
+
+
