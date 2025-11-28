@@ -120,18 +120,18 @@
 
 <style>
 html {
-  font-size: 16px; /* default desktop */
+  font-size: 16px; 
 }
 
 @media (max-width: 576px) {
   html {
-    font-size: 12px; /* perkecil skala di HP */
+    font-size: 12px; 
   }
 }
 
 .photo-container {
   display: inline-block;
-  width: 22rem; /* 350px */
+  width: 22rem; 
   border-radius: 1.25rem;
   animation: moveBox 6s infinite alternate ease-in-out;
   position: relative;
@@ -146,15 +146,15 @@ html {
 }
 
 @keyframes moveBox {
-  from { transform: translateX(-4.7rem); } /* 75px */
+  from { transform: translateX(-4.7rem); } 
   to   { transform: translateX(0); }
 }
 
 .stack-container {
   position: relative;
   width: 100%;
-  max-width: 31rem; /* 500px */
-  height: 22rem;    /* 350px */
+  max-width: 31rem; 
+  height: 22rem;   
 }
 
 .photo-box {
@@ -177,10 +177,41 @@ html {
   z-index: 1;
 }
 .box2 {
-  top: 7rem;     /* 110px */
-  left: 11.5rem; /* 200px */
+  top: 7rem;    
+  left: 11.5rem; 
   z-index: 2;
 }
+
+.tag-kategori {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    z-index: 1; 
+}
+
+.badge.bg-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+.card {
+    position: relative; 
+    overflow: hidden; 
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
 
 </style>
 <!-- Galeri -->
@@ -221,108 +252,124 @@ html {
         </div>
     </div>
 
-    <!-- Projects -->
-    <div class="container px-4 px-lg-5 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
-            <!-- Card 1 -->
-            <div class="col mb-5" data-category="website">
-                <div class="card h-100 rounded-4 animate-card">
-                    <img class="card-img-top" src="gambar portofolio/image.png" alt="Web Downloader Video">
-                    <div class="card-body p-4 text-center">
-                        <h5 class="fw-bolder">Web Downloader Video</h5>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <p>
-                            Web yang berisi alat untuk download video dari Instagram, Facebook, dan TikTok
-                            <a href="/downloader.html" target="_self">Lihat Selengkapnya</a>
-                        </p>
-                    </div>
+<!-- Projects -->
+<div class="container px-4 px-lg-5 mt-5">
+    <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+        <!-- Card 1 -->
+        <div class="col mb-5" data-category="website">
+            <div class="card h-100 rounded-4 animate-card shadow-lg">
+                <img class="card-img-top" src="gambar portofolio/image.png" alt="Web Downloader Video">
+                <div class="card-body p-4 text-center">
+                    <!-- Tag Kategori -->
+                    <span class="badge bg-info text-dark tag-kategori">Website</span>
+                    <h5 class="fw-bolder">Web Downloader Video</h5>
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <p>
+                        Web yang berisi alat untuk download video dari Instagram, Facebook, dan TikTok
+                        <a href="/downloader.html" target="_self">Lihat Selengkapnya</a>
+                    </p>
                 </div>
             </div>
+        </div>
 
-            <!-- Card 2 -->
-            <div class="col mb-5" data-category="website">
-                <div class="card h-100 rounded-4 animate-card">
-                    <img class="card-img-top" src="gambar portofolio/SAW.png" alt="Web Penilaian Siswa">
-                    <div class="card-body p-4 text-center">
-                        <h5 class="fw-bolder">Web Penilaian Siswa</h5>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <p>
-                            Web analisis siswa yang kurang berprestasi yang terintegrasi database MYSQL
-                            <a href="saw.html">Lihat Selengkapnya</a>
-                        </p>
-                    </div>
+        <!-- Card 2 -->
+        <div class="col mb-5" data-category="website">
+            <div class="card h-100 rounded-4 animate-card shadow-lg">
+                <img class="card-img-top" src="gambar portofolio/SAW.png" alt="Web Penilaian Siswa">
+                <div class="card-body p-4 text-center">
+                    <!-- Tag Kategori -->
+                    <span class="badge bg-info text-dark tag-kategori">Website</span>
+                    <h5 class="fw-bolder">Web Penilaian Siswa</h5>
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <p>
+                        Web analisis siswa yang kurang berprestasi yang terintegrasi database MYSQL
+                        <a href="saw.html">Lihat Selengkapnya</a>
+                    </p>
                 </div>
             </div>
+        </div>
 
-            <!-- Card 3 -->
-            <div class="col mb-5" data-category="website">
-                <div class="card h-100 rounded-4 animate-card">
-                    <img class="card-img-top" src="gambar portofolio/webkopi.png" alt="Web Kopi">
-                    <div class="card-body p-4 text-center">
-                        <h5 class="fw-bolder">Web Kopi</h5>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <p>
-                            Web marketplace yang menampilkan jenis-jenis kopi yang terintegrasi database MYSQL
-                            <a href="/kopi.html" target="_self">Lihat Selengkapnya</a>
-                        </p>
-                    </div>
+        <!-- Card 3 -->
+        <div class="col mb-5" data-category="website">
+            <div class="card h-100 rounded-4 animate-card shadow-lg">
+                <img class="card-img-top" src="gambar portofolio/webkopi.png" alt="Web Kopi">
+                <div class="card-body p-4 text-center">
+                    <!-- Tag Kategori -->
+                    <span class="badge bg-info text-dark tag-kategori">Website</span>
+                    <h5 class="fw-bolder">Web Kopi</h5>
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <p>
+                        Web marketplace yang menampilkan jenis-jenis kopi yang terintegrasi database MYSQL
+                        <a href="/kopi.html" target="_self">Lihat Selengkapnya</a>
+                    </p>
                 </div>
             </div>
+        </div>
 
-            <!-- Card 4 -->
-            <div class="col mb-5" data-category="website">
-                <div class="card h-100 rounded-4 animate-card">
-                    <img class="card-img-top" src="gambar portofolio/signew.png" alt="Web Sebaran informasi Geografis">
-                    <div class="card-body p-4 text-center">
-                        <h5 class="fw-bolder">Web SIG</h5>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <p>
-                            Web yang dibuat untuk menampilkan sebaran balita dengan jumlah posyandu.
-                            <a href="/sig.html" target="_self">Lihat Selengkapnya</a>
-                        </p>
-                    </div>
+        <!-- Card 4 -->
+        <div class="col mb-5" data-category="website">
+            <div class="card h-100 rounded-4 animate-card shadow-lg">
+                <img class="card-img-top" src="gambar portofolio/signew.png" alt="Web Sebaran informasi Geografis">
+                <div class="card-body p-4 text-center">
+                    <!-- Tag Kategori -->
+                    <span class="badge bg-info text-dark tag-kategori">Website</span>
+                    <h5 class="fw-bolder">Web SIG</h5>
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <p>
+                        Web yang dibuat untuk menampilkan sebaran balita dengan jumlah posyandu.
+                        <a href="/sig.html" target="_self">Lihat Selengkapnya</a>
+                    </p>
                 </div>
             </div>
+        </div>
 
-            <!-- Card 5 -->
-            <div class="col mb-5" data-category="website">
-                <div class="card h-100 rounded-4 animate-card">
-                    <img class="card-img-top" src="gambar portofolio/kkl.png" alt="kkl">
-                    <div class="card-body p-4 text-center">
-                        <h5 class="fw-bolder">Web Laporan KKL</h5>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <p>
-                            Web yang dibuat untuk menampilkan dokumentasi KKL ke Bali.
-                            <a href="/kkl.html" target="_self">Lihat Selengkapnya</a>
-                        </p>
-                    </div>
+        <!-- Card 5 -->
+        <div class="col mb-5" data-category="website">
+            <div class="card h-100 rounded-4 animate-card shadow-lg">
+                <img class="card-img-top" src="gambar portofolio/kkl.png" alt="kkl">
+                <div class="card-body p-4 text-center">
+                    <!-- Tag Kategori -->
+                    <span class="badge bg-info text-dark tag-kategori">Website</span>
+                    <h5 class="fw-bolder">Web Laporan KKL</h5>
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <p>
+                        Web yang dibuat untuk menampilkan dokumentasi KKL ke Bali.
+                        <a href="/kkl.html" target="_self">Lihat Selengkapnya</a>
+                    </p>
                 </div>
             </div>
+        </div>
 
-            <!-- Card 6 -->
-            <div class="col mb-5" data-category="uiux">
-                <div class="card h-100 rounded-4 animate-card">
-                    <img class="card-img-top" src="gambar portofolio/figmawebkopi.png" alt="kkl">
-                    <div class="card-body p-4 text-center">
-                        <h5 class="fw-bolder">Figma Web Kopi Pengguna</h5>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <p>
-                            Desain Figma Web Kopi menampilkan layout bagian Pengguna.
-                            <a href="/figmawebkopi.html" target="_self">Lihat Selengkapnya</a>
-                        </p>
-                    </div>
+        <!-- Card 6 -->
+        <div class="col mb-5" data-category="uiux">
+            <div class="card h-100 rounded-4 animate-card shadow-lg">
+                <img class="card-img-top" src="gambar portofolio/figmawebkopi.png" alt="kkl">
+                <div class="card-body p-4 text-center">
+                    <!-- Tag Kategori -->
+                    <span class="badge bg-warning text-dark tag-kategori">UI/UX</span>
+                    <h5 class="fw-bolder">Figma Web Kopi Pengguna</h5>
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <p>
+                        Desain Figma Web Kopi menampilkan layout bagian Pengguna.
+                        <a href="/figmawebkopi.html" target="_self">Lihat Selengkapnya</a>
+                    </p>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
 
         </div>
     </div>
 </section>
+
 
 <script>
 // Pencarian Berdasarkan Judul Proyek
@@ -407,11 +454,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if(entry.isIntersecting) {
                 entry.target.classList.add('show');
             } else {
-                entry.target.classList.remove('show'); // fade out saat scroll up
+                entry.target.classList.remove('show'); 
             }
         });
     }, {
-        threshold: 0.2 // 20% card terlihat trigger animasi
+        threshold: 0.2 
     });
 
     cards.forEach(card => observer.observe(card));
